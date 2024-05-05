@@ -6,6 +6,8 @@
     <title>Document</title>
 </head>
 <body>
+
+    <button id="btn1" onclick="clickMe()">click me</button>
     
     <script>
         // arithmetic operators
@@ -152,7 +154,7 @@
         //     console.log('no condition above is true')
         // }
 
-        let grade = 74;
+        // let grade = 74;
 
         // if(grade <= 74){
         //     console.log('Failed!')
@@ -321,37 +323,75 @@
 
         //  objects
         // declare
-        let person = {
-            name: 'john',
-            age: '18',
-            address: 'pasig',
-            gender: 'male'
-        }
-        let car = {
-            "plate-number": '0082nas',
-            drive: function (){
-                console.log('driving...')
-            }
-        }
+        // let person = {
+        //     name: 'john',
+        //     age: '18',
+        //     address: 'pasig',
+        //     gender: 'male'
+        // }
+        // let car = {
+        //     "plate-number": '0082nas',
+        //     drive: function (){
+        //         console.log('driving...')
+        //     }
+        // }
 
 
         // access dot notation
         // access dot notation
-        console.log(person)
-        console.log(person.name)
-        console.log(person.age)
+        // console.log(person)
+        // console.log(person.name)
+        // console.log(person.age)
 
-        // access bracket notation
-        console.log(person["name"])
-        console.log(person["age"])
+        // // access bracket notation
+        // console.log(person["name"])
+        // console.log(person["age"])
 
-        console.log(car["plate-number"])
+        // console.log(car["plate-number"])
 
-        car.drive();
-        car["drive"]();
+        // car.drive();
+        // car["drive"]();
 
 
+        // let button = document.getElementById("btn1")
+        // console.log(button.style)
+        // // background-color: 
+        // button.style.backgroundColor = "red"
+        // button.style.fontSize = "100px"
 
+        // let newButton = document.createElement('button')
+        // newButton.textContent = "new button"
+        // let body = document.querySelector('body')
+        // let btn1 = document.querySelector('#btn1')
+        // body.appendChild(newButton)
+
+        // console.log(btn1)
+
+        // let btn1 = document.querySelector('#btn1')
+        // let body = document.querySelector('body')
+
+        // let toggle = false;
+        // btn1.addEventListener('click', function(){
+            
+        //     if(toggle){
+        //         body.style.backgroundColor = 'red'
+        //     }else{
+        //         body.style.backgroundColor = '#fff'
+        //     }
+        //     toggle = !toggle
+        // })
+
+        // function clickMe(){
+        //     console.log('clicked!')
+        // }
+
+        fetch("https://pokeapi.co/api/v2/pokemon").then(function(response){
+            return response.json()
+        }).then(function(data){
+            console.log(data)
+        }).catch(function(err){
+            console.log(err)
+        })
     </script>
 </body>
 </html>
