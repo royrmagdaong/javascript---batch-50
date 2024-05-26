@@ -407,38 +407,38 @@
         // }
 
         // encapsulation
-        class Person {
-            //
-            constructor(name, age) {
-                this.name = name;
-                this._age = age;
-                this._isAdult = age >= 18; // Encapsulated property
-            }
+        // class Person {
+        //     //
+        //     constructor(name, age) {
+        //         this.name = name;
+        //         this._age = age;
+        //         this._isAdult = age >= 18; // Encapsulated property
+        //     }
 
-            get isAdult() {
-                return this._isAdult; // Encapsulated getter method
-            }
-            set isAdult(value) {
-                throw new Error('isAdult is a derived property and cannot be modified.'); // Encapsulated setter method
-            }
+        //     get isAdult() {
+        //         return this._isAdult; // Encapsulated getter method
+        //     }
+        //     set isAdult(value) {
+        //         throw new Error('isAdult is a derived property and cannot be modified.'); // Encapsulated setter method
+        //     }
 
-            get age() {
-                // throw new Error('age is a derived property and cannot be modified.'); // Encapsulated setter method
-                return this._age;
-            }
-            set age(value) {
-             // Encapsulated setter method
-              //  this  // throw new Error('age is a derived property and cannot be modified.'); // ._age = value
-            }
+        //     get age() {
+        //         // throw new Error('age is a derived property and cannot be modified.'); // Encapsulated setter method
+        //         return this._age;
+        //     }
+        //     set age(value) {
+        //      // Encapsulated setter method
+        //       //  this  // throw new Error('age is a derived property and cannot be modified.'); // ._age = value
+        //     }
             
-            sayHello() {
-                console.log(`Hello, my name is ${this.name}.`);
-            }
-        }
+        //     sayHello() {
+        //         console.log(`Hello, my name is ${this.name}.`);
+        //     }
+        // }
 
-        const john = new Person('John Doe', 25);
-        john._age = 31
-        console.log(john.age)
+        // const john = new Person('John Doe', 25);
+        // john._age = 31
+        // console.log(john.age)
 
         // console.log(john._age)
         // john.sayHello(); // Outputs: Hello, my name is John Doe.
@@ -451,7 +451,52 @@
         // const john = new Person('John Doe', 25)
 
         
+        
+        // abstraction
 
+        // class Circle {
+        //     constructor(radius) {
+        //         this.radius = radius;
+        //         console.log('radius:', this.radius)
+        //     }
+
+        //     calculateArea() {
+        //         this.area = Math.PI * this.radius * this.radius;
+        //         console.log('Area: ', this.area)
+        //         return this.area;
+        //     }
+        // }
+
+        // const myCircle = new Circle(5); // Abstraction of a circle
+        // const myCircle2 = new Circle(10); // Abstraction of a circle
+        // const area = myCircle.calculateArea(); // Abstraction of area calculation
+        // const area2 = myCircle2.calculateArea(); // Abstraction of area calculation
+
+        // inheritance
+        // class Animal {
+        //     constructor(name) {
+        //         this.name = name;
+        //     }
+
+        //     speak() {
+        //         console.log(`${this.name} makes a sound.`);
+        //     }
+        // }
+
+        // class Dog extends Animal {
+        //     constructor(name, breed) {
+        //         super(name); // Calls the parent class constructor
+        //         this.breed = breed;
+        //     }
+
+        //     speak() {
+        //         console.log(`${this.name} barks!`);
+        //     }
+        // }
+
+        // const myDog = new Dog('Buddy', 'Labrador');
+        // myDog.speak(); // Outputs: Buddy barks!
+        // console.log(myDog.breed); // Outputs: Labrador
         
 
 
