@@ -406,6 +406,52 @@
         //     name: '2'
         // }
 
+        // encapsulation
+        class Person {
+            //
+            constructor(name, age) {
+                this.name = name;
+                this._age = age;
+                this._isAdult = age >= 18; // Encapsulated property
+            }
+
+            get isAdult() {
+                return this._isAdult; // Encapsulated getter method
+            }
+            set isAdult(value) {
+                throw new Error('isAdult is a derived property and cannot be modified.'); // Encapsulated setter method
+            }
+
+            get age() {
+                // throw new Error('age is a derived property and cannot be modified.'); // Encapsulated setter method
+                return this._age;
+            }
+            set age(value) {
+             // Encapsulated setter method
+              //  this  // throw new Error('age is a derived property and cannot be modified.'); // ._age = value
+            }
+            
+            sayHello() {
+                console.log(`Hello, my name is ${this.name}.`);
+            }
+        }
+
+        const john = new Person('John Doe', 25);
+        john._age = 31
+        console.log(john.age)
+
+        // console.log(john._age)
+        // john.sayHello(); // Outputs: Hello, my name is John Doe.
+
+        // console.log(john.isAdult); // Outputs: true
+        // // john.isAdult = false; // Throws an error (setter is encapsulated)
+        // // john.age = 30;
+        // console.log(john._age)
+        
+        // const john = new Person('John Doe', 25)
+
+        
+
         
 
 
